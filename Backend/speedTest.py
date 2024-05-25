@@ -23,6 +23,7 @@ def get_public_ip_address():
         print(f"Error al obtener la dirección IP pública: {e}")
 
 
+
 # Sirve para medir los datos de Subida (upload) y de Bajada (download) de la red 
 
 def medir_ancho_de_banda_red_local(unidadDeMedida):
@@ -52,7 +53,6 @@ def medir_ancho_de_banda_red_local(unidadDeMedida):
     return bytes_sent_gb , bytes_recv_gb
 
 
-
 # Obtener Nombre de la Red 
 
 def get_windows_ssid():
@@ -70,7 +70,7 @@ def get_windows_ssid():
     except subprocess.CalledProcessError:
         return None
 
-
+print('hola  '+get_windows_ssid())
 
 # sirve para obtener la ip del computador o dispositivo 
 
@@ -78,6 +78,7 @@ def get_ip_address():
     hostname = socket.gethostname()
     ip_address = socket.gethostbyname(hostname)
     return ip_address
+
 
 # Sirve para odtener la dirección privada asignada por el router en el dispositivo en uina red LAN 
 
@@ -99,7 +100,4 @@ def obtener_ip_privada():
     except Exception as e:
         print("Error al obtener la dirección IP privada:", e)
         return None
-
-
-
 
