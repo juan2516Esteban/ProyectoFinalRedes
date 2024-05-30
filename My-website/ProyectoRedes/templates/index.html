@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>PyScript Hello World</title>
+    </head>
+
+    <body>
+        <section class="pyscript">
+            Hello world! <br />
+            This is the current date and time, as computed by Python:
+
+            <h1>La dirección IP pública es: {{ ip }}</h1>
+            <h1>La Nombre de la red es: {{ nombreDeRed }}</h1>
+            <h1>la Ip del dispositivo es: {{ IpDevices }}</h1>
+            <h1>La ip privada del dispositivo en la red es: {{PriavteIp}} </h1>
+        </section>
+
+        <form action="{{url_for('AnchodeBanda')}}" method="post" >
+            <select name="options" required="required">
+                <option value="" disabled selected hidden>Selecciona una opción</option>
+                <option value="gigabytes">gigabytes</option> 
+                <option value="bytes">bytes</option> 
+            </select> 
+            <br><br> 
+            <input type="submit" value="Enviar"> 
+        </form>
+
+        {{output}}
+    </body>
+</html>
