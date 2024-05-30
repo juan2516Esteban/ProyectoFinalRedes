@@ -1,9 +1,9 @@
-from flask import Flask, render_template , request 
-import speedtest
+from flask import Flask, render_template , request , send_from_directory
+from Backend import speedTest 
  
 
 app = Flask(__name__)
-functions = speedtest
+functions = speedTest
 
 
 @app.route("/" , methods = ['GET'])
