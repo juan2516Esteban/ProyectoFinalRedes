@@ -1,10 +1,11 @@
-from flask import Flask, render_template , request , send_from_directory
-from Backend import speedTest 
- 
+from flask import Flask, render_template , request 
+from Backend import speedTest
+
 
 app = Flask(__name__)
 functions = speedTest
 
+ip = functions.get_public_ip_address()
 
 @app.route("/" , methods = ['GET'])
 def speedtest():
