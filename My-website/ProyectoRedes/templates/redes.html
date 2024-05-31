@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Redes</title>
+</head>
+<body>
+    <p class="p-style">
+        Dinámismo de Identidades de Red, calculadas por Python:
+    </p>
+    <div class="responsive">
+        <div>
+            <img src="{{ url_for('static', filename='red.jpg') }}" class="images" alt="Red Image">
+        </div>
+        <div class="respo">
+            <section class="pyscript">
+                <br>
+                <h1>La dirección IP pública es: {{ datos.ip }}</h1>
+                <h1>La Nombre de la red es: {{ datos.nombre }}</h1>
+                <h1>la Ip del dispositivo es: {{ datos.IpDevices }}</h1>
+                <h1>La ip privada del dispositivo en la red es: {{datos.PrivateIp}} </h1>
+            </section>
+            
+            <form action="{{url_for('speedtest')}}" method="post" >
+                <select name="options" required >
+                    <option value="" disabled selected hidden>Selecciona una opción</option>
+                    <option value="gigabytes">gigabytes</option> 
+                    <option value="bytes">bytes</option> 
+                </select> 
+                <br><br> 
+                <input type="submit" value="Enviar"> 
+            </form>
+            {% if output %}
+            <p class="style-p">{{ output }}</p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="p-responsive">
+        <div>
+            <p class="p-diseño">
+                Una dirección <strong>IP pública </strong> es aquella que se asigna a cualquier dispositivo que se conecta directamente a Internet, como el router de casa o los servidores donde se alojan las páginas web. Esta IP es visible desde Internet y es única, lo que significa que no se repite.
+            </p>
+        </div>
+        <div>
+            <p class="p-diseño">
+                Una dirección <strong>IP privada</strong> es una dirección fija que se asigna a cada dispositivo conectado a una red local o doméstica. Cada dispositivo tiene su propia dirección IP privada, pero comparten la misma IP pública del router. Las <strong> IP privadas</strong> no son accesibles desde Internet y no cambian a menos que las asignemos manualmente
+            </p>
+        </div>
+    </div> 
+    <p class="p-diseño">
+        Un <strong> ancho de banda</strong>, es la cantidad de datos que podemos enviar y recibir en una comunicación por unidad de tiempo. Se mide en bits por segundo (bps), kilobits por segundo (Kb/s), megabits por segundo (Mb/s) o gigabits por segundo (Gb/s). Para calcularlo, podemos usar la fórmula del ancho de banda a -3dB,Además, el Q-Factor (Factor de Calidad) también está relacionado con el ancho de banda y mide la selectividad de un filtro en torno a una frecuencia central o de resonancia
+    </p>
+</body>
+</html>

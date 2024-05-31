@@ -1,0 +1,78 @@
+body{
+    background-color: #f9fcff;
+    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+    background-repeat: no-repeat;
+}
+.responsive{
+    display: flex;
+    justify-content: space-around;
+}
+.respo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    text-shadow: 1px 0.5px #000;
+    margin: 15px;
+}
+.p-style{
+    margin-top: 25px;
+    font-size: 40px;
+    text-shadow: 10px 8px #ccf, -15px 12px #fcf, -8px -12px #cfc, 12px -5px #fc9;
+    color: #000;
+    display: flex;
+    justify-content: center;
+}
+.style-p{
+    margin-bottom: 60px;
+    font-style: italic; 
+    font-size: 30px;
+}
+.p-diseño{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 15px;
+}
+.p-responsive{
+  display: flex;
+  justify-content: space-around;
+}
+.images{
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(0px 16px 10px rgba(0, 0, 225, 0.6));
+    border-radius: 200px;
+}
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 7px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-family:monospace ;
+    font-size: 15px;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #217525;
+  }
+  
+  option{
+    font-size: 15px;
+    font-family:monospace ;
+  }
