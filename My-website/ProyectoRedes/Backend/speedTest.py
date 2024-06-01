@@ -5,7 +5,7 @@ import psutil
 import socket
 import subprocess
 import requests
-import speedTest
+import speedtest
 
 
 # Obotener Ip Publica de red 
@@ -98,13 +98,13 @@ def obtener_ip_privada():
         return None
     
 def internet_bajada():
-    st = speedTest.Speedtest()
+    st = speedtest.Speedtest()
     st.get_best_server()
-    return st.download() / 1024 / 1024
+    return round(st.download() / 1024 / 1024,2)
 
 def internet_subida():
-    st = speedTest.Speedtest()
+    st = speedtest.Speedtest()
     st.get_best_server()
-    return st.upload() / 1024 / 1024
+    return round(st.upload() / 1024 / 1024,2)
 
 
