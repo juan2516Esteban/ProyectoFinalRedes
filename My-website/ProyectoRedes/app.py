@@ -5,6 +5,8 @@ from Backend import speedTest
 app = Flask(__name__)
 functions = speedTest
 Json = []
+velocidadSubida = functions.internet_subida()
+velocidadBajada = functions.internet_bajada()
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -27,13 +29,13 @@ def speedtest():
         "nombre": functions.get_windows_ssid(),
         "IpDevices": functions.get_ip_address(),
         "PrivateIp": functions.obtener_ip_privada(),
-        "velocidadSubida": functions.internet_subida(),
-        "velocidadBajada": functions.internet_bajada()
     }
     
+    v1 = velocidadSubida
+    v2 = velocidadBajada
     Json = datos
     salida = output
-    return render_template("redes.html", datos=Json, output=salida)
+    return render_template("redes.html", datos=Json, output=salida , v1=v1 , v2=v2)
 
 if __name__ == "__main__":
     app.run(debug=True)
