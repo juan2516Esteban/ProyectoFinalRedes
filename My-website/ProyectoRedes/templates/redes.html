@@ -23,6 +23,8 @@
                 <h1>la Ip del dispositivo es: {{ datos.IpDevices }}</h1>
                 <h1>La ip privada del dispositivo en la red es: {{datos.PrivateIp}} </h1>
             </section>
+
+            <h3>Para obtener el ancho de banda de tu Internet por favor escaoge una opción: </h3>
             
             <form action="{{url_for('speedtest')}}" method="post" >
                 <select name="options" required >

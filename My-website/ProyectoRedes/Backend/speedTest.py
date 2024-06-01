@@ -46,10 +46,6 @@ def medir_ancho_de_banda_red_local(unidadDeMedida: str):
         bytes_sent_gb = round(network_stats.bytes_sent / (1024 ** 3) , 2)  # Convertir bytes a gigabytes (GB)
         bytes_recv_gb = round(network_stats.bytes_recv / (1024 ** 3) , 2)  # Convertir bytes a gigabytes (GB)
 
-            # Mostrar las estadísticas de subida y bajada de datos en gigabytes (GB)
-        print(f"Gigabytes enviados: {bytes_sent_gb:.2f} GB")
-        print(f"Gigabytes recibidos: {bytes_recv_gb:.2f} GB")
-        
     return bytes_sent_gb , bytes_recv_gb
 
 
