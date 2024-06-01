@@ -27,6 +27,8 @@ def speedtest():
         "nombre": functions.get_windows_ssid(),
         "IpDevices": functions.get_ip_address(),
         "PrivateIp": functions.obtener_ip_privada(),
+        "velocidadSubida": functions.internet_subida(),
+        "velocidadBajada": functions.internet_bajada(),
     }
     
     Json = datos

@@ -5,6 +5,7 @@ import psutil
 import socket
 import subprocess
 import requests
+import speedTest
 
 
 # Obotener Ip Publica de red 
@@ -95,4 +96,15 @@ def obtener_ip_privada():
     except Exception as e:
         print("Error al obtener la dirección IP privada:", e)
         return None
+    
+def internet_bajada():
+    st = speedTest.Speedtest()
+    st.get_best_server()
+    return st.download() / 1024 / 1024
+
+def internet_subida():
+    st = speedTest.Speedtest()
+    st.get_best_server()
+    return st.upload() / 1024 / 1024
+
 
